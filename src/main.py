@@ -14,13 +14,13 @@ acs = """
   3. change hero info
 """
 def initiate_game():
-    start_response = input('Press ENTER to START')
+    start_response = input('Press ENTER')
     if start_response == "":
         print(acs)
         main_menu()
         
 def main_menu():
-    response = input("What would you like to do first? ")
+    response = input("What will you select ")
     if response == "1":
         input_create_hero()
     elif response == "2":
@@ -37,10 +37,10 @@ def show_all_heroes():
          print(f"{num + 1}: {value[0]}")
      return hero_list
 
-# Shows the list of heroes and asks for user to type in a number corresponding with hero id number
+
 def input_select_hero():
     show_all_heroes()
-    hero_pick = input('Choose a hero to get to know...')
+    hero_pick = input('Choose a hero')
     select_a_hero(hero_pick)
     return_to_main_menu()
 
